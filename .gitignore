@@ -1,0 +1,42 @@
+# Compiled Java class files
+*.class
+
+# Compiled Java source
+bin/
+target/
+out/
+
+# IDE-specific files (Eclipse, IntelliJ, NetBeans, etc.)
+.settings/
+.classpath
+.project
+*.iml
+.idea/
+*.ipr
+*.iws
+nb-configuration.xml
+
+# Maven build directories
+*/target/
+*/.mvn/
+
+# Gradle build directories
+.gradle/
+build/
+out/
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Javadoc generated files
+target/apidocs/
+doc/
+
+# .gitignore itself should always be ignored
+!.gitignore
+
