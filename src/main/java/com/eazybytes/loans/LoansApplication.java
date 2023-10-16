@@ -7,12 +7,18 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+import com.eazybytes.loans.dto.AccountAddressDto;
+import com.eazybytes.loans.dto.AccountDetailsDto;
+
 
 @SpringBootApplication
 /*@ComponentScans({ @ComponentScan("com.eazybytes.loans.controller") })
 @EnableJpaRepositories("com.eazybytes.loans.repository")
 @EntityScan("com.eazybytes.loans.model")*/
+@EnableConfigurationProperties({AccountDetailsDto.class, AccountAddressDto.class})
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @OpenAPIDefinition(
 		info = @Info(

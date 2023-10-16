@@ -10,3 +10,30 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+     - "application-qa.yml"
+     - "application-prod.yml"
+  profiles:
+    active: 
+     - "qa"
+  
+
+build:
+ version: "1.0"
+ 
+ 
+accounts:
+  message: "Welcome Anish Alwekar..."
+  contact:
+    name: "Anish Alwekar"
+    email: "alwekar@gmail.com"
+  onCallSupport:
+    - 9422509399
+    - 8975978269
+    
+    
+account-address:
+  branch: SBI Shahupuri
+  pinCode: "416003"
+  city: Kolhapur

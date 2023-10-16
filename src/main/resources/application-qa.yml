@@ -1,0 +1,24 @@
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+build:
+ version: "2.0"
+ 
+ 
+accounts:
+  message: "Welcome Ruchita Alwekar..."
+  contact:
+    name: "Ruchita Alwekar"
+    email: "ruchita@gmail.com"
+  onCallSupport:
+    - 9834587449
+    - 9999999999
+    
+    
+account-address:
+  branch: SBI UdyamNager
+  pinCode: "416008"
+  city: Kolhapur
