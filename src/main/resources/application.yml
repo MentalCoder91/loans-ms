@@ -1,6 +1,10 @@
 server:
   port: 8090
 spring:
+  application:
+    name: loans
+  profiles:
+    active: prod
   datasource:
     url: jdbc:mysql://localhost:3306/eazyms
     username: root
@@ -10,30 +14,15 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
   config:
-    import:
-     - "application-qa.yml"
-     - "application-prod.yml"
-  profiles:
-    active: 
-     - "qa"
+    import: "optional:configserver:http://localhost:8071/"
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
   
 
-build:
- version: "1.0"
- 
- 
-accounts:
-  message: "Welcome Anish Alwekar..."
-  contact:
-    name: "Anish Alwekar"
-    email: "alwekar@gmail.com"
-  onCallSupport:
-    - 9422509399
-    - 8975978269
-    
-    
-account-address:
-  branch: SBI Shahupuri
-  pinCode: "416003"
-  city: Kolhapur
