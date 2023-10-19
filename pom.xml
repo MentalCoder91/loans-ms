@@ -103,6 +103,22 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<to>
+						<image>mentalcoder1991/${project.artifactId}:v1</image>
+						<credHelper>gcr</credHelper>
+						<auth>
+							<username>mentalcoder91</username>
+							<password>dckr_pat_iiMnWoC4QNi72pmySvZVUpEat7E</password>
+						</auth>
+					</to>
+
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
